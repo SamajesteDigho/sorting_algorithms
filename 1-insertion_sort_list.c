@@ -6,8 +6,11 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-listint_t *front, *back, *curr = (*list);
-while (curr != NULL && curr->next != NULL)
+listint_t *front, *back, *curr;
+if (list != NULL || (*list) != NULL)
+{
+curr = (*list);
+while (curr->next != NULL)
 if (curr->n > curr->next->n)
 {
 front = curr->next;
@@ -45,4 +48,5 @@ break;
 }
 else
 curr = curr->next;
+}
 }
