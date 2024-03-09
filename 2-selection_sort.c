@@ -4,7 +4,7 @@
  * @array: Array to be sorted
  * @size: Size of the array
  * Description: Sort the array using the selection sort
-*/
+ */
 void selection_sort(int *array, size_t size)
 {
 size_t i, j, min, trans;
@@ -22,9 +22,12 @@ if (array[j] < array[min])
 min = j;
 }
 }
+if (i != min)
+{
 trans = array[i];
 array[i] = array[min];
 array[min] = trans;
 print_array(array, size);
+}
 }
 }
