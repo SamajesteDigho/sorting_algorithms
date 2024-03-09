@@ -19,6 +19,8 @@ front->next->prev = curr;
 front->prev = curr->prev;
 if (curr->prev != NULL)
 curr->prev->next = front;
+else
+(*list) = front;
 curr->prev = front;
 front->next = curr;
 print_list(*list);
