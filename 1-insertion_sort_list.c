@@ -7,6 +7,8 @@
 void insertion_sort_list(listint_t **list)
 {
 listint_t *curr, *front, *back;
+if (list == NULL || *list == NULL)
+return;
 curr = (*list);
 while (curr->next != NULL)
 {
