@@ -28,10 +28,14 @@ print_array(array, size);
 }
 }
 i = i + 1;
+if (i != end)
+{
 swap = array[i];
 array[i] = array[end];
 array[end] = swap;
 print_array(array, size);
+}
+
 return (i);
 }
 
@@ -63,5 +67,7 @@ requicksort(array, size, p + 1, end);
  */
 void quick_sort(int *array, size_t size)
 {
+if (array == NULL || size == 0)
+return;
 requicksort(array, size, 0, size - 1);
 }
