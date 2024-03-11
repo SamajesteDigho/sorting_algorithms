@@ -6,7 +6,7 @@
  * @end: End
  * @side: Side
  * Description: Sort array using the Merge sort algorithm.
-*/
+ */
 void print_array_partly(int *arr, int start, int end, char *side)
 {
 int i;
@@ -28,7 +28,7 @@ printf("\n");
  * @end: End
  * @A: Array to sort
  * Description: Sort array using the Merge sort algorithm.
-*/
+ */
 void TopDownMerge(int *B, int begin, int middle, int end, int *A)
 {
 int i, j, k;
@@ -60,7 +60,7 @@ print_array_partly(B, begin, end, "[Done]: ");
  * @end: End
  * @A: Array to sort
  * Description: Sort array using the Merge sort algorithm.
-*/
+ */
 void TopDownSplitMerge(int *B, int begin, int end, int *A)
 {
 int middle;
@@ -77,15 +77,15 @@ TopDownMerge(B, begin, middle, end, A);
  * @array: Array to sort
  * @size: Size of the array
  * Description: Sort array using the Merge sort algorithm.
-*/
+ */
 void merge_sort(int *array, size_t size)
 {
 int n, i;
 int *duplicate;
 if (array == NULL || size == 0)
 return;
-n = (int) size;
-duplicate = (int *) malloc(size);
+n = (int)size;
+duplicate = (int *) malloc(size * sizeof(int));
 for (i = 0; i < n; i++)
 duplicate[i] = array[i];
 TopDownSplitMerge(array, 0, n, duplicate);
