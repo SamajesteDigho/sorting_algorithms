@@ -4,6 +4,7 @@
  * i_left_child - I Left Child
  * @i: index
  * Description: Sort array using the Heap sort algorithm.
+ * Return: I Left
  */
 int i_left_child(int i)
 {
